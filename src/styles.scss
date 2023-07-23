@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/_media-queries.scss';
+@import './styles/_variables.scss';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--text-color);;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+@include respond-above(sm) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@include respond-above(md) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@include respond-above(lg) {
+  .container {
+    max-width: 1140px;
+  }
+}
