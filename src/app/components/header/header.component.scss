@@ -1,6 +1,9 @@
+@import './styles/_media-queries.scss';
+
 .navigation {
   padding-top: 0.938rem;
   padding-bottom: 0.938rem;
+  display: flex;
 }
 
 .navigation .container {
@@ -29,4 +32,40 @@
   padding: 0.5rem 0.875rem;
   color: #fff;
   margin-left: 0.75rem;
+}
+
+.btn-menu{
+  cursor: pointer;
+}
+@include respond-below(md) {
+  .sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    border-left: 1px solid rgba(0, 0, 0, 0.175);
+    transform: translateX(100%);
+    bottom: 0;
+    z-index: 1024;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: #212529;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidenav.show {
+    visibility: visible;
+    transform: none;
+  }
+}
+
+@include respond-above(md) {
+  .btn-menu {
+    display: none;
+  }
 }
