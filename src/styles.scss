@@ -5,7 +5,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  color: var(--text-color);;
+  color: var(--text-color);
 }
 
 h1,
@@ -36,18 +36,30 @@ h6 {
 
 @include respond-above(sm) {
   .container {
-    max-width: 720px;
+    max-width: 540px;
   }
 }
 
 @include respond-above(md) {
   .container {
-    max-width: 960px;
+    max-width: 720px;
   }
 }
 
 @include respond-above(lg) {
   .container {
+    max-width: 960px;
+  }
+}
+
+@include respond-above(xl) {
+  .container {
     max-width: 1140px;
+  }
+}
+
+@include respond-above(xxl) {
+  .container {
+    max-width: 1320px;
   }
 }

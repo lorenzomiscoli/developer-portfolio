@@ -15,56 +15,130 @@
 
 .nav-list {
   display: flex;
-  flex-direction: row;
   list-style: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list .nav-item .nav-link {
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 1rem;
+  cursor: pointer;
+  color: var(--nav-link-color);
+
+  &:hover {
+    color: var(--nav-link-hover-color);
+  }
 }
 
 .btn-contact {
+  display: inline-block;
   font-size: 1rem;
   background-color: var(--primary-color);
   border-radius: 50px;
   padding: 0.5rem 0.875rem;
   color: #fff;
-  margin-left: 0.75rem;
-}
-
-.btn-menu{
+  margin-top: 0.5rem;
   cursor: pointer;
-}
-@include respond-below(md) {
-  .sidenav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 400px;
-    border-left: 1px solid rgba(0, 0, 0, 0.175);
-    transform: translateX(100%);
-    bottom: 0;
-    z-index: 1024;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    color: #212529;
-    visibility: hidden;
-    background-color: #fff;
-    background-clip: padding-box;
-    outline: 0;
-    transition: transform 0.3s ease-in-out;
-  }
+  transition: color .15s ease-in-out, background-color .15s ease-in-out;
 
-  .sidenav.show {
-    visibility: visible;
-    transform: none;
+  &:hover {
+    background-color: var(--primary-color-dark);
   }
+}
+
+.btn-menu {
+  cursor: pointer;
+  fill: var(--sidenav-toggler-color);
+
+  &:hover {
+    fill: var(--sidenav-toggler-hover-color);
+  }
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  border-left: 1px solid rgba(0, 0, 0, 0.175);
+  transform: translateX(100%);
+  bottom: 0;
+  z-index: 1024;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: #212529;
+  visibility: hidden;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidenav.show {
+  visibility: visible;
+  transform: none;
+}
+
+.sidenav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.sidenav-body {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidenav-title {
+  margin-bottom: 0;
+}
+
+.sidenav-close {
+  cursor: pointer;
 }
 
 @include respond-above(md) {
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .nav-list .nav-item .nav-link {
+    padding: 0.625rem;
+  }
+
+  .btn-contact {
+    margin-top: 0;
+    margin-left: 0.75rem;
+  }
+
+  .sidenav {
+    position: static;
+    z-index: auto;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+    transition: none;
+  }
+
+  .sidenav-header {
+    display: none;
+  }
+
+  .sidenav-body {
+    display: flex;
+    padding: 0;
+  }
+
   .btn-menu {
     display: none;
   }
