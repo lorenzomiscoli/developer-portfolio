@@ -1,22 +1,28 @@
-import { Component, ElementRef, ViewChild } from "@angular/core";
-import { ClickOutsideDirective } from "src/app/directives/click-outside.directive";
+import { ClickOutsideDirective } from 'src/app/directives/click-outside.directive';
+import { CommonModule } from '@angular/common';
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
   styleUrls: ["./header.component.scss"],
   standalone: true,
-  imports: [ClickOutsideDirective]
+  imports: [CommonModule]
 })
 export class HeaderComponent {
-  @ViewChild("sidenav") sidenav!: ElementRef;
+  public isSidenavVisible = false;
+  public isSidenavHiding = false;
 
-  public openSidenav(): void {
-    this.sidenav.nativeElement.classList.add("show");
+  public open(): void {
+    this.isSidenavVisible = true;
   }
 
-  public closeSidenav(): void {
-    this.sidenav.nativeElement.classList.remove("show");
+  public close(): void {
+    this.isSidenavHiding = true;
+    setTimeout(() => {
+      this.isSidenavVisible = false;
+      this.isSidenavHiding = false;
+    }, 500);
   }
 
 }

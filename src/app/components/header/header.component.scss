@@ -34,6 +34,15 @@
   }
 }
 
+.btn-menu {
+  cursor: pointer;
+  color: var(--sidenav-toggler-color);
+
+  &:hover {
+    color: var(--sidenav-toggler-hover-color);
+  }
+}
+
 .btn-contact {
   display: inline-block;
   font-size: 1rem;
@@ -50,38 +59,33 @@
   }
 }
 
-.btn-menu {
-  cursor: pointer;
-  fill: var(--sidenav-toggler-color);
-
-  &:hover {
-    fill: var(--sidenav-toggler-hover-color);
-  }
-}
-
 .sidenav {
   position: fixed;
   top: 0;
   right: 0;
   width: 400px;
   border-left: 1px solid rgba(0, 0, 0, 0.175);
-  transform: translateX(100%);
   bottom: 0;
-  z-index: 1024;
+  z-index: 1045;
   display: flex;
   flex-direction: column;
   max-width: 100%;
   color: #212529;
-  visibility: hidden;
   background-color: #fff;
   background-clip: padding-box;
   outline: 0;
-  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: ease-in-out 0.5s transform;
 }
 
 .sidenav.show {
-  visibility: visible;
-  transform: none;
+  visibility: visible !important;
+
+  &:not(.hiding) {
+    transform: translateX(0);
+    transition: ease-in-out 0.5s transform;
+  }
 }
 
 .sidenav-header {
@@ -102,17 +106,39 @@
 
 .sidenav-close {
   cursor: pointer;
+  color: var(--sidenav-toggler-color);
+
+  &:hover {
+    color: var(--sidenav-toggler-hover-color);
+  }
+}
+
+.sidenav-backdrop {
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  transition: opacity .15s linear;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.sidenav-backdrop.show {
+  opacity: .5;
+  visibility: visible;
+}
+
+.sidenav-backdrop.hiding {
+  opacity: 0;
+  visibility: visible;
 }
 
 @include respond-above(md) {
-  .nav-list {
-    flex-direction: row;
-  }
-
-  .nav-list .nav-item .nav-link {
-    padding: 0.625rem;
-  }
-
   .btn-contact {
     margin-top: 0;
     margin-left: 0.75rem;
@@ -126,7 +152,7 @@
     visibility: visible !important;
     background-color: transparent !important;
     border: 0 !important;
-    transform: none !important;
+    transform: none;
     transition: none;
   }
 
@@ -142,4 +168,26 @@
   .btn-menu {
     display: none;
   }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row !important;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list .nav-item .nav-link {
+    display: block;
+    padding: 0.625rem !important;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--nav-link-color);
+
+    &:hover {
+      color: var(--nav-link-hover-color);
+    }
+  }
+
 }
