@@ -1,28 +1,29 @@
-import { ClickOutsideDirective } from 'src/app/directives/click-outside.directive';
 import { CommonModule } from '@angular/common';
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import { SidenavComponent } from '../sidenav/sidenav.component';
+import {
+  NavItem,
+  navItems,
+  sidenavAnimations,
+} from 'src/app/constants/header-nav';
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, SidenavComponent],
+  animations: [sidenavAnimations],
 })
 export class HeaderComponent {
-  public isSidenavVisible = false;
-  public isSidenavHiding = false;
+  public navItems: NavItem[] = navItems;
+  public sidenavState: string = 'out';
 
-  public open(): void {
-    this.isSidenavVisible = true;
+  public openSidenav() {
+    this.sidenavState = 'in';
   }
 
-  public close(): void {
-    this.isSidenavHiding = true;
-    setTimeout(() => {
-      this.isSidenavVisible = false;
-      this.isSidenavHiding = false;
-    }, 500);
+  public closeSidenav() {
+    this.sidenavState = 'out';
   }
-
 }

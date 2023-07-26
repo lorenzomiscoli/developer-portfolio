@@ -1,9 +1,10 @@
-@import './styles/_media-queries.scss';
+@import "./styles/_media-queries.scss";
 
 .navigation {
   padding-top: 0.938rem;
   padding-bottom: 0.938rem;
   display: flex;
+  background-color: var(--secondary-color);
 }
 
 .navigation .container {
@@ -16,18 +17,20 @@
 .nav-list {
   display: flex;
   list-style: none;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
 
-.nav-list .nav-item .nav-link {
+.nav-list .nav-item .link {
   display: block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
   color: var(--nav-link-color);
+  text-decoration: none;
 
   &:hover {
     color: var(--nav-link-hover-color);
@@ -52,14 +55,15 @@
   color: #fff;
   margin-top: 0.5rem;
   cursor: pointer;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
   &:hover {
     background-color: var(--primary-color-dark);
   }
 }
 
-.sidenav {
+.nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -79,7 +83,7 @@
   transition: ease-in-out 0.5s transform;
 }
 
-.sidenav.show {
+.nav.show {
   visibility: visible !important;
 
   &:not(.hiding) {
@@ -88,23 +92,23 @@
   }
 }
 
-.sidenav-header {
+.nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.sidenav-body {
+.nav-body {
   padding: 1rem;
   overflow-y: auto;
 }
 
-.sidenav-title {
+.nav-title {
   margin-bottom: 0;
 }
 
-.sidenav-close {
+.nav-close {
   cursor: pointer;
   color: var(--sidenav-toggler-color);
 
@@ -113,8 +117,8 @@
   }
 }
 
-.sidenav-backdrop {
-  opacity: .5;
+.nav-backdrop {
+  opacity: 0.5;
   position: fixed;
   top: 0;
   left: 0;
@@ -122,18 +126,18 @@
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   cursor: pointer;
 }
 
-.sidenav-backdrop.show {
-  opacity: .5;
+.nav-backdrop.show {
+  opacity: 0.5;
   visibility: visible;
 }
 
-.sidenav-backdrop.hiding {
+.nav-backdrop.hiding {
   opacity: 0;
   visibility: visible;
 }
@@ -144,7 +148,7 @@
     margin-left: 0.75rem;
   }
 
-  .sidenav {
+  .nav {
     position: static;
     z-index: auto;
     width: auto !important;
@@ -156,11 +160,11 @@
     transition: none;
   }
 
-  .sidenav-header {
+  .nav-header {
     display: none;
   }
 
-  .sidenav-body {
+  .nav-body {
     display: flex;
     padding: 0;
   }
@@ -168,26 +172,4 @@
   .btn-menu {
     display: none;
   }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row !important;
-    list-style: none;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-list .nav-item .nav-link {
-    display: block;
-    padding: 0.625rem !important;
-    font-size: 1rem;
-    cursor: pointer;
-    color: var(--nav-link-color);
-
-    &:hover {
-      color: var(--nav-link-hover-color);
-    }
-  }
-
 }
