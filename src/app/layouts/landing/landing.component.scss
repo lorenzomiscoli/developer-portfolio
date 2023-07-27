@@ -1,0 +1,52 @@
+@import './styles/_media-queries.scss';
+
+.section {
+  background-color: var(--secondary-color);
+  padding-top: 3.125rem;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  max-width: 100%;
+  height: auto;
+}
+
+.fullname {
+  font-size: 3.125rem;
+}
+
+.profession {
+  font-size: 1.688rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@include respond-above(md) {
+  .details-container {
+    flex: 1;
+    align-self: center;
+    padding-right: 9.375rem;
+  }
+
+  .img-container {
+    flex: 0.7;
+  }
+
+}
