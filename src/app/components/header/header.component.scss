@@ -39,10 +39,10 @@
 
 .btn-menu {
   cursor: pointer;
-  color: var(--sidenav-toggler-color);
+  fill: var(--sidenav-toggler-color);
 
   &:hover {
-    color: var(--sidenav-toggler-hover-color);
+    fill: var(--sidenav-toggler-hover-color);
   }
 }
 
