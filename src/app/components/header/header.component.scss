@@ -37,6 +37,12 @@
   }
 }
 
+.logo {
+  cursor: pointer;
+  max-width: 170px;
+  vertical-align: middle;
+}
+
 .btn-menu {
   cursor: pointer;
   fill: var(--sidenav-toggler-color);

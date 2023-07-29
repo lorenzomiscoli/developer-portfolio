@@ -8,6 +8,7 @@
 .details-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3.125rem;
 }
 
 .img-container {
@@ -31,11 +32,48 @@
   margin-bottom: 0;
 }
 
+.description {
+  margin-bottom: 1.25rem;
+}
+
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons-container li:not(:last-child) {
+  margin-right: 0.625rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2;
+  border-radius: 50%;
+  fill: #475569;
+  background: #d8dbe1;
+  border-color: #d8dbe1;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #cccfd7;
+    border-color: #cccfd7;
+  }
 }
 
 @include respond-above(md) {
