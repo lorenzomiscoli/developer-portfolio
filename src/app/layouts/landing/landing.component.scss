@@ -65,14 +65,14 @@
   vertical-align: middle;
   line-height: 2;
   border-radius: 50%;
-  fill: #475569;
-  background: #d8dbe1;
-  border-color: #d8dbe1;
+  fill: var(--text-color);
+  background: var(--social-icon-color);
+  border-color: var(--social-icon-color);
   transition: background-color 0.15s ease-in-out;
 
   &:hover {
-    background-color: #cccfd7;
-    border-color: #cccfd7;
+    background-color: var(--social-icon-hover-color);
+    border-color: var(--social-icon-hover-color);
   }
 }
 
