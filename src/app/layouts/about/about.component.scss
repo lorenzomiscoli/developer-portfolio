@@ -1,0 +1,53 @@
+@import './styles/_media-queries.scss';
+
+.section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-top: -0.625rem;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.125rem;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.first-desc {
+  margin-bottom: 1.25rem;
+}
+
+@include respond-above(md) {
+  .desc-container {
+    flex: 1;
+    padding-left: 5rem;
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .img-container {
+    flex: 0.7;
+  }
+
+}
