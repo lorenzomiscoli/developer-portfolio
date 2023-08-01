@@ -67,6 +67,10 @@
   }
 }
 
+.sidenav-list .sidenav-item .link.active {
+  color: var(--primary-color);
+}
+
 .btn-contact {
   display: inline-block;
   font-size: 1rem;
@@ -84,4 +88,8 @@
   &:hover {
     background-color: var(--primary-color-dark);
   }
+}
+
+.btn-contact.active-btn {
+  background-color: var(--primary-color-dark);
 }

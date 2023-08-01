@@ -2,6 +2,10 @@
 @import './styles/_media-queries.scss';
 @import './styles/_variables.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;

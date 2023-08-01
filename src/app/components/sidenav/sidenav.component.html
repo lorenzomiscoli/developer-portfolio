@@ -10,7 +10,9 @@
   <div class="sidenav-body">
     <ul class="sidenav-list">
       <li class="sidenav-item" *ngFor="let item of sidenavItems">
-        <a [href]="item.link" [className]="item.className">
+        <a routerLink="/" [fragment]="item.link" [routerLinkActive]="item.activeClassName" [href]="item.link"
+          [className]="item.className"
+          [routerLinkActiveOptions]="{ matrixParams: 'exact', queryParams: 'exact', paths: 'exact', fragment: 'exact'}">
           {{ item.title }}
         </a>
       </li>

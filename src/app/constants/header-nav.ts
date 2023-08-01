@@ -10,28 +10,33 @@ export interface NavItem {
   title: string;
   link: string;
   className: string;
+  activeClassName: string
 }
 
 export const navItems: NavItem[] = [
   {
     title: 'About',
-    link: '',
+    link: 'about',
     className: 'link',
+    activeClassName: 'active'
   },
   {
     title: 'Services',
-    link: '',
+    link: 'services',
     className: 'link',
+    activeClassName: 'active'
   },
   {
     title: 'Portfolio',
-    link: '',
+    link: 'portfolio',
     className: 'link',
+    activeClassName: 'active'
   },
   {
     title: 'Contact Me',
-    link: '',
+    link: 'contact',
     className: 'btn-contact',
+    activeClassName: 'active-btn'
   },
 ];
 

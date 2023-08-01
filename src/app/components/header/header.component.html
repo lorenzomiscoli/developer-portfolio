@@ -2,7 +2,7 @@
   <nav class="navigation">
     <div class="container">
       <a>
-        <img class="logo" src="./assets/img/logo.svg" alt="">
+        <img routerLink="/" fragment="landing" class="logo" src="./assets/img/logo.svg" alt="">
       </a>
       <svg class="btn-menu" xmlns="http://www.w3.org/2000/svg" height="1.50em" viewBox="0 0 448 512"
         (click)="openSidenav()">
@@ -13,7 +13,10 @@
         <div class="nav-body">
           <ul class="nav-list">
             <li class="nav-item" *ngFor="let item of navItems">
-              <a [href]="item.link" [className]="item.className">
+              <a routerLink="/" [fragment]="item.link" [routerLinkActive]="item.activeClassName"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ matrixParams: 'exact', queryParams: 'exact', paths: 'exact', fragment: 'exact'}"
+                [href]="item.link" [className]="item.className">
                 {{ item.title }}
               </a>
             </li>

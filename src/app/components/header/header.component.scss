@@ -37,6 +37,10 @@
   }
 }
 
+.nav-list .nav-item .link.active {
+  color: var(--primary-color) !important;
+}
+
 .logo {
   cursor: pointer;
   max-width: 170px;
@@ -67,6 +71,10 @@
   &:hover {
     background-color: var(--primary-color-dark);
   }
+}
+
+.btn-contact.active-btn {
+  background-color: var(--primary-color-dark);
 }
 
 .nav {

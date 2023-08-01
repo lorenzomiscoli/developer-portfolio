@@ -6,13 +6,14 @@ import {
   navItems,
   sidenavAnimations,
 } from 'src/app/constants/header-nav';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule, SidenavComponent],
+  imports: [CommonModule, SidenavComponent, RouterModule],
   animations: [sidenavAnimations],
 })
 export class HeaderComponent {
