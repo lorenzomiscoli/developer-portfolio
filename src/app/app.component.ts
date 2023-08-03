@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { LandingComponent } from './layouts/landing/landing.component';
-import { AboutComponent } from './layouts/about/about.component';
-import { ServicesComponent } from './layouts/services/services.component';
+import { APP_DEPS } from './app.config';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, LandingComponent, AboutComponent, ServicesComponent],
+  imports: [APP_DEPS],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

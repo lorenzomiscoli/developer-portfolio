@@ -1,19 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SidenavComponent } from '../sidenav/sidenav.component';
 import {
   NavItem,
   navItems,
   sidenavAnimations,
 } from 'src/app/constants/header-nav';
-import { RouterModule } from '@angular/router';
+import { HEADER_DEPS } from './header.dependencies';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule, SidenavComponent, RouterModule],
+  imports: [HEADER_DEPS],
   animations: [sidenavAnimations],
 })
 export class HeaderComponent {

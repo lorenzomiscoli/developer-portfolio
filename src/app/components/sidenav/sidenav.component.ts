@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { NavItem, navItems } from '../../constants/header-nav';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { SIDENAV_DEPS } from './sidenav.dependencies';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [SIDENAV_DEPS],
 })
 export class SidenavComponent {
   @Output() public onClose = new EventEmitter<void>();
