@@ -1,0 +1,20 @@
+.scroll-top {
+  display: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  z-index: 99;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  & svg {
+    transition: background-color 0.15s ease-in-out;
+    fill: var(--primary-color);
+
+    &:hover {
+      fill: var(--primary-color-dark);
+    }
+  }
+}
