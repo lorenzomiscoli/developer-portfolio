@@ -5,6 +5,7 @@
   padding-bottom: 0.938rem;
   display: flex;
   background-color: var(--secondary-color);
+  transition: background-color 300ms ease;
 }
 
 .navigation .container {
@@ -186,4 +187,15 @@
   .btn-menu {
     display: none;
   }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px 0 rgba(36, 50, 66, .075);
+
+    & nav {
+      background-color: #ffff !important;
+    }
+  }
+
 }
