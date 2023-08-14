@@ -57,9 +57,8 @@
 .sidenav-list .sidenav-item .link {
   display: block;
   padding: 0.625rem 1rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   cursor: pointer;
-  text-decoration: none;
   color: var(--nav-link-color);
 
   &:hover {
@@ -73,7 +72,7 @@
 
 .btn-contact {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   background-color: var(--primary-color);
   border-radius: 50px;
   padding: 0.5rem 0.875rem;
@@ -82,7 +81,6 @@
   color: #fff;
   margin-top: 0.5rem;
   cursor: pointer;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
   &:hover {

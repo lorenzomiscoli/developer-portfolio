@@ -1,32 +1,32 @@
 @import './styles/_media-queries.scss';
 
-.section {
+section {
   background-color: var(--secondary-color);
   padding-top: 3.125rem;
+  margin-top: 0;
 }
 
-.details-container {
+.landing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 3.125rem;
+  column-gap: 9.375rem;
+}
+
+.landing-details {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3.125rem;
 }
 
-.img-container {
+.landing-img {
   display: flex;
   flex-direction: column;
-}
-
-.banner {
-  max-width: 100%;
-  height: auto;
-}
-
-.fullname {
-  font-size: 3.125rem;
 }
 
 .profession {
-  font-size: 1.688rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
   font-weight: 500;
   margin-bottom: 0;
@@ -34,13 +34,6 @@
 
 .description {
   margin-bottom: 1.25rem;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .social-icons-container {
@@ -77,14 +70,16 @@
 }
 
 @include respond-above(md) {
-  .details-container {
+  .landing-details {
     flex: 1;
     align-self: center;
-    padding-right: 9.375rem;
   }
 
-  .img-container {
+  .landing-img {
     flex: 0.7;
   }
 
+  .profession {
+    font-size: 1.688rem;
+  }
 }

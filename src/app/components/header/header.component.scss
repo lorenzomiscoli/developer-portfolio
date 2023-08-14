@@ -28,10 +28,9 @@
   display: block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   cursor: pointer;
   color: var(--nav-link-color);
-  text-decoration: none;
 
   &:hover {
     color: var(--nav-link-hover-color);
@@ -59,14 +58,13 @@
 
 .btn-contact {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   background-color: var(--primary-color);
   border-radius: 50px;
   padding: 0.5rem 0.875rem;
   color: #fff;
   margin-top: 0.5rem;
   cursor: pointer;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
   &:hover {
@@ -158,9 +156,14 @@
 }
 
 @include respond-above(md) {
+  .nav-list .nav-item .link {
+    font-size: 1rem;
+  }
+
   .btn-contact {
     margin-top: 0;
     margin-left: 0.75rem;
+    font-size: 1rem;
   }
 
   .nav {

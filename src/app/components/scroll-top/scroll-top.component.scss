@@ -1,6 +1,6 @@
 .scroll-top {
   display: none;
-  background-color: transparent;
+  background: var(--primary-color);
   outline: none;
   border: none;
   z-index: 99;
@@ -8,17 +8,25 @@
   position: fixed;
   right: 30px;
   bottom: 30px;
+  transition: background-color 0.15s ease-in-out;
+  width: 2.5em;
+  height: 2.5em;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  align-items: center;
+  justify-content: center;
 
   & svg {
-    transition: background-color 0.15s ease-in-out;
-    fill: var(--primary-color);
+    fill: #ffff;
+  }
 
-    &:hover {
-      fill: var(--primary-color-dark);
-    }
+  &:hover {
+    background-color: var(--primary-color-dark);
   }
 }
 
 .active {
-  display: block !important;
+  display: flex !important;
 }

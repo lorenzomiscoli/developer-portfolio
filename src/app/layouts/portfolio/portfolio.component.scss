@@ -1,17 +1,5 @@
 @import './styles/_media-queries.scss';
 
-.section {
-  margin-top: 6.25rem;
-  margin-bottom: 6.25rem;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .title-container {
   margin-bottom: 3.75rem;
 }
@@ -49,7 +37,6 @@
   padding: 0.625rem 1.5rem;
   color: #fff;
   cursor: pointer;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border: 0;
 

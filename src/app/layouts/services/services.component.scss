@@ -1,64 +1,44 @@
 @import './styles/_media-queries.scss';
 
-.section {
+section {
   background-color: var(--secondary-color);
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-.row {
+.services-title {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.services {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  gap: 2.5rem;
 }
 
-.section-desc {
-  margin-bottom: 3rem;
-}
-
-.section-title-container {
-  justify-content: center;
-}
-
-.section-title-subcontainer {
+.services-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.service-card {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3.125rem;
-  align-items: center;
-  text-align: center;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.service-title {
+.services-card-title {
   margin-bottom: 1.25rem;
 }
 
-.service-subtitle {
+.services-card-subtitle {
   color: var(--primary-color);
   font-size: 1rem;
 }
 
 @include respond-above(md) {
-  .service-card {
+  .services-card {
     flex: 1;
-    margin-bottom: 0;
     align-items: flex-start;
     text-align: left;
-
-    &:not(:last-child) {
-      margin-right: 1.875rem;
-    }
   }
-
 }
