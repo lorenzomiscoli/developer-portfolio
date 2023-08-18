@@ -27,6 +27,12 @@ export const navItems: NavItem[] = [
     activeClassName: 'active'
   },
   {
+    title: 'Resume',
+    link: 'resume',
+    className: 'link',
+    activeClassName: 'active'
+  },
+  {
     title: 'Portfolio',
     link: 'portfolio',
     className: 'link',

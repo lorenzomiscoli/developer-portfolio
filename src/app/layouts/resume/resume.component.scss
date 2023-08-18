@@ -1,0 +1,172 @@
+@import './styles/_media-queries.scss';
+
+h2 {
+  margin-bottom: 3.125rem;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  padding: 2.188rem;
+  row-gap: 1.25rem;
+}
+
+.experience-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card-info-title {
+  margin-bottom: 0.625rem;
+}
+
+.experience-card-info-date {
+  font-size: 1rem;
+  margin-bottom: 0.313rem;
+}
+
+.experience-card-info-badge {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0.313rem 0.625rem;
+}
+
+.experience-card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card-details-title {
+  margin-bottom: 0.625rem;
+}
+
+hr {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border: 1px solid rgba(11, 11, 19, 0.05);
+}
+
+.education-skill {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 3.125rem;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+  border-radius: 10px;
+  row-gap: 1.25rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.education-date {
+  font-size: 1rem;
+}
+
+.education-title {
+  font-size: 1rem;
+  margin-top: 0.313rem;
+  margin-bottom: 0.313rem;
+}
+
+.education-institute {
+  font-size: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  column-gap: 1.25rem;
+}
+
+.skill-info {
+  width: 100%;
+}
+
+.skill-count {
+  font-size: 1.75rem;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.skill-title {
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.skill-progress {
+  width: 100%;
+  height: 0.625rem;
+  background-color: var(--secondary-color);
+}
+
+.skill-progress-inner {
+  height: 0.625rem;
+  background-color: var(--primary-color);
+}
+
+.skill-progress-92 {
+  width: 92%;
+}
+
+.skill-progress-90 {
+  width: 90%;
+}
+
+.skill-progress-85 {
+  width: 85%;
+}
+
+.skill-progress-80 {
+  width: 80%;
+}
+
+@include respond-above(md) {
+  .experience-card-info {
+    flex: 1;
+    border-right: 1px solid rgba(11, 11, 19, 0.05);
+  }
+
+  .experience-card-details {
+    flex: 3;
+    padding-left: 1.25rem;
+  }
+
+  .education-skill {
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+
+  .education {
+    flex: 1;
+  }
+
+  .skill {
+    flex: 3;
+    align-self: center;
+  }
+}

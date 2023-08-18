@@ -9,8 +9,18 @@ import { AboutComponent } from './layouts/about/about.component';
 import { ServicesComponent } from './layouts/services/services.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 import { PortfolioComponent } from './layouts/portfolio/portfolio.component';
+import { ResumeComponent } from './layouts/resume/resume.component';
 
-export const APP_DEPS = [CommonModule, HeaderComponent, LandingComponent, AboutComponent, ServicesComponent, ScrollTopComponent, PortfolioComponent];
+export const APP_DEPS = [
+  CommonModule,
+  HeaderComponent,
+  LandingComponent,
+  AboutComponent,
+  ServicesComponent,
+  ScrollTopComponent,
+  PortfolioComponent,
+  ResumeComponent
+];
 
 const routes: Route[] = [];
 
