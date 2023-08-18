@@ -1,56 +1,48 @@
 @import './styles/_media-queries.scss';
 
-.title-container {
-  margin-bottom: 3.75rem;
+section {
+  background-color: var(--secondary-color);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-.prj-container {
+.section-info {
+  text-align: center;
   margin-bottom: 5rem;
 }
 
-.prj-desc-container {
+.projects {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 2.5rem;
 }
 
-.prj-img-container {
+.projects-card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.625rem;
+  flex: 1;
+  text-align: center;
 }
 
-.prj-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.prj-desc {
+.projects-card-logo {
+  width: auto;
+  height: 2.25rem;
+  display: inline-block;
+  vertical-align: top;
   margin-bottom: 1.25rem;
 }
 
-.prj-live-btn {
-  display: inline-block;
-  font-size: 1rem;
-  background-color: var(--primary-color);
-  border-radius: 50px;
-  padding: 0.625rem 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  border: 0;
-
-  &:hover {
-    background-color: var(--primary-color-dark);
-  }
+.projects-card-desc {
+  margin-bottom: 1.25rem;
 }
 
-.icon {
-  margin-left: 0.625rem;
-  cursor: pointer;
+.projects-card-actions {
+  display: flex;
+  column-gap: 0.625rem;
+  justify-content: center;
 }
 
-.social-icon {
+.projects-card-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,10 +52,27 @@
   vertical-align: middle;
   line-height: 2;
   border-radius: 50%;
+  transition: background-color 0.15s ease-in-out;
+}
+
+
+.live-btn {
+  fill: #fff;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+  }
+}
+
+.source-btn {
   fill: var(--text-color);
   background: var(--social-icon-color);
   border-color: var(--social-icon-color);
-  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--social-icon-hover-color);
@@ -71,22 +80,23 @@
   }
 }
 
+.disabled-btn {
+  fill: var(--text-color);
+  background: var(--social-icon-color);
+  border-color: var(--social-icon-color);
+}
+
 @include respond-above(md) {
-  .prj-desc-container {
-    padding-right: 9.375rem;
-    flex: 1;
+  .projects {
+    flex-direction: row;
   }
 
-  .prj-img-container {
-    flex: 1;
-    order: 2;
+  .projects-card {
+    text-align: left;
   }
 
-  .prj-container {
-    margin-bottom: 7.5rem;
+  .projects-card-actions {
+    justify-content: flex-start;
   }
 
-  .prj-img-container {
-    margin-bottom: 0;
-  }
 }
