@@ -1,0 +1,9 @@
+<div class="carousel">
+  <div class="viewbox" #viewbox>
+    <div class="content" [style.transform]="'translateX('+position+'px)'" #content>
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="navigation" *ngFor="let dot of navigationDots" [class.active]="dot === currentDot"
+    (click)="scrollTo(dot)"></div>
+</div>
