@@ -1,0 +1,46 @@
+@import './styles/_media-queries.scss';
+
+.section-info {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.testimonials {
+  text-align: center;
+}
+
+.testimonials-card {
+  margin-bottom: 1.875rem;
+}
+
+.testimonials-card-desc {
+  margin-bottom: 2.5rem;
+}
+
+img {
+  margin: 2.5rem auto 2rem;
+  max-width: 6rem;
+  height: auto;
+  border-radius: 100px;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0.313rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@include respond-above(md) {
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  h5 {
+    font-size: 0.938rem;
+  }
+}
