@@ -1,5 +1,9 @@
 @import "./styles/_media-queries.scss";
 
+header {
+  z-index: 1024;
+}
+
 .navigation {
   padding-top: 0.938rem;
   padding-bottom: 0.938rem;
