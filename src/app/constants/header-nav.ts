@@ -40,7 +40,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Contact Me',
-    link: 'contact',
+    link: 'contacts',
     className: 'btn-contact',
     activeClassName: 'active-btn'
   },

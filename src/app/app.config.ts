@@ -11,6 +11,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
 import { PortfolioComponent } from './layouts/portfolio/portfolio.component';
 import { ResumeComponent } from './layouts/resume/resume.component';
 import { TestimonialsComponent } from './layouts/testimonials/testimonials.component';
+import { ContactsComponent } from './layouts/contacts/contacts.component';
 
 export const APP_DEPS = [
   CommonModule,
@@ -21,7 +22,8 @@ export const APP_DEPS = [
   ScrollTopComponent,
   PortfolioComponent,
   ResumeComponent,
-  TestimonialsComponent
+  TestimonialsComponent,
+  ContactsComponent
 ];
 
 const routes: Route[] = [];
