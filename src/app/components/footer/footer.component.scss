@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid rgb(203, 213, 225);
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.coopyright {
+  font-size: 1rem;
+  text-align: center;
+
+  &>a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}

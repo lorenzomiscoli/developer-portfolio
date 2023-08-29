@@ -12,6 +12,7 @@ import { PortfolioComponent } from './layouts/portfolio/portfolio.component';
 import { ResumeComponent } from './layouts/resume/resume.component';
 import { TestimonialsComponent } from './layouts/testimonials/testimonials.component';
 import { ContactsComponent } from './layouts/contacts/contacts.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export const APP_DEPS = [
   CommonModule,
@@ -23,7 +24,8 @@ export const APP_DEPS = [
   PortfolioComponent,
   ResumeComponent,
   TestimonialsComponent,
-  ContactsComponent
+  ContactsComponent,
+  FooterComponent
 ];
 
 const routes: Route[] = [];
