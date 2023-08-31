@@ -1,7 +1,7 @@
 <section>
   <div class="container">
     <div class="contacts">
-      <div class="contacts-info">
+      <div class="contacts-info" appFade="left">
         <h2>Get in touch</h2>
         <p>Always available for freelancing if the right project comes along, Feel free to contact me.</p>
         <ul>
@@ -34,7 +34,7 @@
           </li>
         </ul>
       </div>
-      <div class="contacts-form">
+      <div class="contacts-form" appFade="left" [delay]="200">
         <h3>Say Something</h3>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <input class="contacts-form-row" type="text" placeholder="Enter your name" formControlName="name">

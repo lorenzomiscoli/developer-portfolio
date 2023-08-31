@@ -1,12 +1,13 @@
 import { Component } from "@angular/core";
-import { TESTIMONIALS_DEPS } from "./testimonials.dependencies";
+import { CarouselComponent } from "../../components/carousel/carousel.component";
+import { FadeDirective } from "../../directives/fade.directive";
 
 @Component({
   selector: "app-testimonials",
   templateUrl: "./testimonials.component.html",
   styleUrls: ["./testimonials.component.scss"],
   standalone: true,
-  imports: [TESTIMONIALS_DEPS]
+  imports: [CarouselComponent, FadeDirective]
 })
 export class TestimonialsComponent {
 
