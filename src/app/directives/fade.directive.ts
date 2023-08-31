@@ -32,7 +32,7 @@ export class FadeDirective implements AfterViewInit, OnDestroy {
   }
 
   private show(show: boolean): void {
-    const metadata = show ? this.getAnimation() : style({ opacity: '*' })
+    const metadata = show ? this.getAnimation() : [style({ opacity: '*' }), animate('0ms', style({ opacity: 0 }))];
     const factory = this.builder.build(metadata);
     const player = factory.create(this.elementRef.nativeElement, { params: { delay: this.delay } });
     player.play();
