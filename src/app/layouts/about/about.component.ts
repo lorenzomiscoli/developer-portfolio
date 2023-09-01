@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { NgOptimizedImage } from "@angular/common";
 import { FadeDirective } from "../../directives/fade.directive";
 
 @Component({
@@ -6,7 +7,7 @@ import { FadeDirective } from "../../directives/fade.directive";
   templateUrl: "./about.component.html",
   styleUrls: ["./about.component.scss"],
   standalone: true,
-  imports: [FadeDirective]
+  imports: [NgOptimizedImage, FadeDirective]
 })
 export class AboutComponent {
 
