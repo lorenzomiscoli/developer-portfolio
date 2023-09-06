@@ -55,3 +55,7 @@ When you are done with the setup, you may want to host your website online.
 Using **GitHub Actions** is the recommended way and the project is already configured to do so.
 
 If you use another way to deploy it just remember to build the project before moving it to a web server.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
