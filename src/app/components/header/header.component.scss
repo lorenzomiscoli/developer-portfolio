@@ -202,7 +202,7 @@ header {
     box-shadow: 0 2px 10px 0 rgba(36, 50, 66, .075);
 
     & nav {
-      background-color: #ffff !important;
+      background-color: var(--nav-color) !important;
     }
   }
 

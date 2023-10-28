@@ -1,7 +1,7 @@
 @import "./styles/_media-queries.scss";
 
 .footer {
-  border-top: 1px solid rgb(203, 213, 225);
+  border-top: 1px solid var(--border-color);
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }

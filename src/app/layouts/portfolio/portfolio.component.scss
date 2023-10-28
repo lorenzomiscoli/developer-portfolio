@@ -69,7 +69,7 @@ section {
 }
 
 .source-btn {
-  fill: var(--text-color);
+  fill: var(--social-icon-text-color);
   background: var(--social-icon-color);
   border-color: var(--social-icon-color);
   cursor: pointer;
@@ -81,7 +81,7 @@ section {
 }
 
 .disabled-btn {
-  fill: var(--text-color);
+  fill: var(--social-icon-text-color);
   background: var(--social-icon-color);
   border-color: var(--social-icon-color);
 }

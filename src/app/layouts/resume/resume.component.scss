@@ -56,7 +56,7 @@ h2 {
 hr {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  border: 1px solid rgba(11, 11, 19, 0.05);
+  border: 1px solid var(--experience-border-color);
 }
 
 .education-skill {
@@ -148,7 +148,7 @@ hr {
 @include respond-above(md) {
   .experience-card-info {
     flex: 1;
-    border-right: 1px solid rgba(11, 11, 19, 0.05);
+    border-right: 1px solid var(--border-color);
   }
 
   .experience-card-details {

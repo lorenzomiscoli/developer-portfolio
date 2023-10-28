@@ -14,7 +14,7 @@
   margin: 0 0.375rem;
   width: 0.938rem;
   height: 0.938rem;
-  border: 2px solid #E6ECF8;
+  border: 2px solid var(--carousel-border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.25s;
