@@ -54,7 +54,9 @@ form {
   font-size: 0.875rem;
   font-family: inherit;
   border-radius: 0.375rem;
-  border: 1px solid rgb(203, 213, 225);
+  border: 1px solid var(--border-color);
+  background-color: var(--body-color);
+  color: var(--text-color);
   outline: none;
   min-height: 3rem;
 
@@ -63,7 +65,7 @@ form {
   }
 
   &:focus {
-    border: 1px solid rgb(148, 163, 184);
+    border: 1px solid var(--border-focus-color);
   }
 }
 

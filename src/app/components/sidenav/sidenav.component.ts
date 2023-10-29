@@ -1,6 +1,5 @@
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NavItem, navItems } from '../../constants/header-nav';
-import { Component } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
 import { SIDENAV_DEPS } from './sidenav.dependencies';
 
 @Component({
