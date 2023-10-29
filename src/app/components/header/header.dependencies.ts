@@ -1,6 +1,7 @@
-import { CommonModule, NgOptimizedImage } from "@angular/common";
-import { SidenavComponent } from "../sidenav/sidenav.component";
+import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { ScrollDirective } from "src/app/directives/scroll-directive";
+import { ScrollDirective } from "../../directives/scroll-directive";
+import { SidenavComponent } from "../sidenav/sidenav.component";
+import { ThemeSwitcherComponent } from "../theme-switcher/theme-switcher.component";
 
-export const HEADER_DEPS = [CommonModule, NgOptimizedImage, SidenavComponent, RouterModule, ScrollDirective];
+export const HEADER_DEPS = [CommonModule, RouterModule, ScrollDirective, SidenavComponent, ThemeSwitcherComponent];

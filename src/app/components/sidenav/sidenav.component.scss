@@ -25,7 +25,6 @@
 
 .sidenav-body {
   padding: 1rem;
-  overflow-y: auto;
 }
 
 .sidenav-title {
@@ -43,6 +42,7 @@
 
 .sidenav-body {
   display: flex;
+  flex-direction: column;
   padding: 0;
 }
 

@@ -1,5 +1,7 @@
-:root {
+body,
+body.light {
   --primary-color: #7f00fd;
+  --primary-color-rgb: 127, 0, 253;
   --primary-color-dark: #7200e4;
   --secondary-color: #F1F5F9;
   --body-color: #fff;
@@ -19,21 +21,19 @@
   --carousel-border-color: #E6ECF8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --secondary-color: #232D3F;
-    --body-color: #1B2430;
-    --text-color: #DEE2E6;
-    --heading-color: #fff;
-    --nav-color: #232D3F;
-    --nav-link-color: rgba(255, 255, 255, 0.65);
-    --nav-link-hover-color: rgba(255, 255, 255, 0.8);
-    --sidenav-toggler-color: rgba(255, 255, 255, 0.65);
-    --sidenav-toggler-hover-color: rgba(255, 255, 255, 0.8);
-    --social-icon-text-color: #1B2430;
-    --border-color: rgb(73, 80, 87);
-    --border-focus-color: rgb(73, 80, 87);
-    --experience-border-color: #33383d;
-    --carousel-border-color: rgb(73, 80, 87);
-  }
+body.dark {
+  --secondary-color: #232D3F;
+  --body-color: #1B2430;
+  --text-color: #DEE2E6;
+  --heading-color: #fff;
+  --nav-color: #232D3F;
+  --nav-link-color: rgba(255, 255, 255, 0.65);
+  --nav-link-hover-color: rgba(255, 255, 255, 0.8);
+  --sidenav-toggler-color: rgba(255, 255, 255, 0.65);
+  --sidenav-toggler-hover-color: rgba(255, 255, 255, 0.8);
+  --social-icon-text-color: #1B2430;
+  --border-color: rgb(73, 80, 87);
+  --border-focus-color: rgb(73, 80, 87);
+  --experience-border-color: #33383d;
+  --carousel-border-color: rgb(73, 80, 87);
 }

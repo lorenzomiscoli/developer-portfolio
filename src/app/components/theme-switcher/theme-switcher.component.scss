@@ -1,0 +1,107 @@
+@import "./styles/_media-queries.scss";
+
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: var(--body-color);
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 0;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  left: auto;
+  top: 100%;
+  margin-top: 0.25rem;
+}
+
+li {
+  min-width: 8rem;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.menu-container {
+  padding: 0.625rem 1rem;
+}
+
+.menu-toggler {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--nav-link-color);
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: var(--nav-link-hover-color);
+
+    svg {
+      fill: var(--nav-link-hover-color);
+    }
+  }
+
+  svg {
+    fill: var(--nav-link-color);
+  }
+}
+
+.menu-toggler-text {
+  margin-left: 0.625rem;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: var(--nav-link-color);
+
+  &:hover {
+    background-color: rgba(var(--primary-color-rgb), .1);
+  }
+
+  &.active {
+    color: #fff;
+    background-color: var(--primary-color) !important;
+  }
+
+  svg {
+    align-self: center;
+    padding-right: 0.625rem;
+    fill: var(--nav-link-color);
+  }
+}
+
+@include respond-above(md) {
+  ul {
+    right: 0;
+  }
+
+  .menu-container {
+    padding: 0;
+  }
+
+  .menu-toggler {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+}

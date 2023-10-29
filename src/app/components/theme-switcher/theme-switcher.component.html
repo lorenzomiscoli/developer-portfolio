@@ -1,0 +1,20 @@
+<div class="menu-container" (clickOutside)="onClickOutside()">
+  <button class="menu-toggler" (click)="toggleMenu()">
+    <svg height="1em" viewBox="0 0 512 512">
+      <path [attr.d]="selectedOption.icon"></path>
+    </svg>
+    <span class="menu-toggler-text">{{togglerLabel}}</span>
+  </button>
+  <div class="menu" *ngIf="isMenuVisible">
+    <ul>
+      <li *ngFor="let val of themeOptions">
+        <button class="menu-item" (click)="updateTheme(val.name)" [ngClass]="{'active':selectedOption.name === val.name}">
+          <svg height="1em" viewBox="0 0 512 512">
+            <path [attr.d]="val.icon"></path>
+          </svg>
+          {{val.name | titlecase }}
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
