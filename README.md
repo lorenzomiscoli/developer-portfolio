@@ -13,6 +13,7 @@ To view a live example, [click here](https://lorenzomiscoli.github.io/developer-
 - Built with Angular and custom SCSS.
 - Fully Responsive
 - Loads fast
+- Light/Dark theme
 
 ## Editing the Template
 
