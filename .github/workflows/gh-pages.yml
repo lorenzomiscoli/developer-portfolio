@@ -32,3 +32,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: dist/developer-portfolio
         enable_jekyll: true
+        cname: wadjinny.com
