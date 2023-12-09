@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-github": "ng build --base-href /developer-portfolio/",
+    "build-github": "ng build ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
