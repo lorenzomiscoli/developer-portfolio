@@ -10,5 +10,9 @@ import { FadeDirective } from "../../directives/fade.directive";
   imports: [NgOptimizedImage, FadeDirective]
 })
 export class AboutComponent {
+  // Set the start date
+  startDate: Date = new Date('2019-07-01');
 
+  // Calculate years of experience
+  yearsOfExperience: number = new Date().getFullYear() - this.startDate.getFullYear();
 }
