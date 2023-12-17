@@ -10,13 +10,6 @@ import { ContactsForm } from "./interfaces/contacts-form.interface";
   standalone: true,
   imports: [CONTACTS_DEPS]
 })
-
-export {}; // This prevents TS file from treating it as a module
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
 export class ContactsComponent implements OnInit {
   public form!: FormGroup<ContactsForm>;
   private submitAttempt = false;
@@ -27,13 +20,6 @@ export class ContactsComponent implements OnInit {
       email: new FormControl('', { nonNullable: true, validators: this.customEmailValidator }),
       message: new FormControl('', { nonNullable: true, validators: Validators.required })
     })
-
-
-    // Initialize Calendly inline widget on component initialization
-    window.Calendly.initInlineWidget({
-      url: 'https://calendly.com/awadjinny/15-phone-call',
-      parentElement: document.querySelector('.calendly-inline-widget'),
-    });
   }
 
   private customEmailValidator(control: AbstractControl): { [key: string]: any } | null {
