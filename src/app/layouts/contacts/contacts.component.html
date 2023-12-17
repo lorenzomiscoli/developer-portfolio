@@ -35,10 +35,12 @@
         </ul>
       </div>
       <div class="contacts-form" appFade="left" [delay]="200">
-        <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/awadjinny/15-phone-call" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
+        <!-- Calendly badge widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/awadjinny/15-phone-call', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: undefined }); }</script>
+        <!-- Calendly badge widget end -->
+        
         <!-- <h3>Say Something</h3>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <input class="contacts-form-row" type="text" placeholder="Enter your name" formControlName="name">
