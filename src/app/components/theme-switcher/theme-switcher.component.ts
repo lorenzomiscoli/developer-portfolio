@@ -1,16 +1,15 @@
 import { Component, Input, OnDestroy, OnInit } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { Subscription } from "rxjs";
-import { ClickOutsideDirective } from "../../directives/click-outside.directive";
 import { ThemeService } from "../../services/theme.service";
 import { ThemeOption, Mode, themeOptions } from "./theme-options";
+import { THEME_SWITCHER_DEPS } from "./theme-switcher.dependencies";
 
 @Component({
   selector: "app-theme-switcher",
   templateUrl: "./theme-switcher.component.html",
   styleUrls: ["./theme-switcher.component.scss"],
   standalone: true,
-  imports: [CommonModule, ClickOutsideDirective]
+  imports: [THEME_SWITCHER_DEPS]
 })
 export class ThemeSwitcherComponent implements OnInit, OnDestroy {
   public isMenuVisible = false;

@@ -1,3 +1,3 @@
-import { CommonModule } from "@angular/common";
+import { NgFor } from "@angular/common";
 
-export const CAROUSEL_DEPS = [CommonModule];
+export const CAROUSEL_DEPS = [NgFor];

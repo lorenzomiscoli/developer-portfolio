@@ -13,7 +13,8 @@
       <div class="nav">
         <div class="nav-body">
           <ul class="nav-list">
-            <li class="nav-item" *ngFor="let item of navItems">
+            @for (item of navItems; track item) {
+            <li class="nav-item">
               <a routerLink="/" [fragment]="item.link" [routerLinkActive]="item.activeClassName"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ matrixParams: 'exact', queryParams: 'exact', paths: 'exact', fragment: 'exact'}"
@@ -21,11 +22,14 @@
                 {{ item.title }}
               </a>
             </li>
+            }
           </ul>
           <app-theme-switcher></app-theme-switcher>
         </div>
       </div>
-      <div class="nav-backdrop" *ngIf="sidenavState === 'in'" (click)="closeSidenav()"></div>
+      @if (sidenavState === 'in'){
+      <div class="nav-backdrop" (click)="closeSidenav()"></div>
+      }
     </div>
   </nav>
 </header>
