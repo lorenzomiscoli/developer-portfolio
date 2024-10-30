@@ -2,30 +2,32 @@
   <div class="container">
     <h2>Experience</h2>
     <div class="experience">
-      <!-- Mailebo -->
-      <div class="experience-card" appFade="up">
+      <!-- Client: Univet -->
+      <div class="experience-card" appFade="up" [delay]="50">
         <div class="experience-card-info">
-          <h3 class="experience-card-info-title">Founder</h3>
-          <span class="experience-card-info-date">Mailebo | Remote</span>
-          <span class="experience-card-info-date">August 2022 - Present</span>
-          <div>
-            <span class="experience-card-info-badge">Full Time</span>
-          </div>
+            <h3 class="experience-card-info-title">Data Engineer</h3>
+            <span class="experience-card-info-date">Univet | Remote</span>
+            <span class="experience-card-info-date">August 2023 - August 2024</span>
+            <div>
+                <span class="experience-card-info-badge">Full Time</span>
+            </div>
         </div>
         <div class="experience-card-details">
-          <h3 class="experience-card-details-title">Mailebo</h3>
-          <p>I created <a href="https://mailebo.com/" target="_blank" rel="noopener noreferrer"> Mailebo</a> a company that aims to simplify the management of corporate email boxes.</p>
-          <h4>Project:</h4>
-          <ul>
-            <li>Create a mailbox that allows automatic mail management.</li>
-            <li>Develop a Python programming interface integrated with Mailebo, in order to define precise and adapted actions for handling all types of email.</li>
-            <li>Secure the tool with an authentication and license verification system.</li>
-            <li>Create a website.</li>
-            <li>Build Mailebo's digital presence: Youtube, Linkedin.</li>
-          </ul>
-          <p><strong>Technologies:</strong> Python, PyQt, Terraform, Azure Functions, Azure Web Apps, Azure Storage, SQL Server, Azure VMs, Github Actions, Docker.</p>
+            <h3 class="experience-card-details-title">Univet</h3>
+            <p>Developed a Data Platform for Univet, a network of veterinary clinics in France and Belgium, aggregating data from clinics and e-commerce to create analytical dashboards and optimize patient aftercare. Key responsibilities and tasks included:</p>
+            <ul>
+                <li>Building the data model.</li>
+                <li>Creating data transport pipelines from various sources to AWS Storage via Airbyte.</li>
+                <li>Developing an API with AWS Lambda Functions and Python to bypass AirByte's limitations.</li>
+                <li>Creating DBT models and snapshots for data layers (Intermediate, Primary, Snapshot, and Datamart).</li>
+                <li>Implementing a Docker file and CI/CD pipeline for automatic integration and deployment.</li>
+                <li>Adding DBT tests and integrating them into the CI/CD pipeline.</li>
+                <li>Writing Python scripts to export patient lists to Brevo.</li>
+            </ul>
+            <p>Technologies: Python, SQL, DBT, Git, GitLab CI/CD, Docker, Kubernetes, AWS Athena, Lambda Functions, AirByte.</p>
         </div>
       </div>
+      
       <!-- Client: Parfums de Marly -->
       <div class="experience-card" appFade="up" [delay]="50">
         <div class="experience-card-info">
