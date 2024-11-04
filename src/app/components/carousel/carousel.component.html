@@ -4,6 +4,7 @@
       <ng-content></ng-content>
     </div>
   </div>
-  <div class="navigation" *ngFor="let dot of navigationDots" [class.active]="dot === currentDot"
-    (click)="scrollTo(dot)"></div>
+  @for (dot of navigationDots; track dot){
+  <div class="navigation" [class.active]="dot === currentDot" (click)="scrollTo(dot)"></div>
+  }
 </div>

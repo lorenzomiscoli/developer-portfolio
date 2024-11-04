@@ -9,13 +9,15 @@
   </div>
   <div class="sidenav-body">
     <ul class="sidenav-list">
-      <li class="sidenav-item" *ngFor="let item of sidenavItems" (click)="close()">
+      @for (item of sidenavItems; track item) {
+      <li class="sidenav-item" (click)="close()">
         <a routerLink="/" [fragment]="item.link" [routerLinkActive]="item.activeClassName" [href]="item.link"
           [className]="item.className"
           [routerLinkActiveOptions]="{ matrixParams: 'exact', queryParams: 'exact', paths: 'exact', fragment: 'exact'}">
           {{ item.title }}
         </a>
       </li>
+      }
     </ul>
     <app-theme-switcher togglerLabel="Toggle Theme"></app-theme-switcher>
   </div>
